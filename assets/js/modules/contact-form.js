@@ -86,7 +86,7 @@ export function initContactForm() {
 
     if (!form.checkValidity()) {
       form.reportValidity();
-      setStatus(statusNode, 'Revise os campos obrigatorios e tente novamente.', 'error');
+      setStatus(statusNode, 'Revise os campos obrigatórios e tente novamente.', 'error');
       return;
     }
 
@@ -102,19 +102,19 @@ export function initContactForm() {
 
     if (!isValidPhone(telefone)) {
       if (phoneField && typeof phoneField.setCustomValidity === 'function') {
-        phoneField.setCustomValidity('Informe um telefone valido com DDD.');
+        phoneField.setCustomValidity('Informe um telefone válido com DDD.');
         phoneField.reportValidity();
       }
-      setStatus(statusNode, 'Telefone invalido. Use DDD, por exemplo: (11) 99999-9999.', 'error');
+      setStatus(statusNode, 'Telefone inválido. Use DDD, por exemplo: (11) 99999-9999.', 'error');
       return;
     }
 
     if (!isValidEmail(email)) {
       if (emailField && typeof emailField.setCustomValidity === 'function') {
-        emailField.setCustomValidity('Informe um e-mail valido.');
+        emailField.setCustomValidity('Informe um e-mail válido.');
         emailField.reportValidity();
       }
-      setStatus(statusNode, 'E-mail invalido. Revise e tente novamente.', 'error');
+      setStatus(statusNode, 'E-mail inválido. Revise e tente novamente.', 'error');
       return;
     }
 
@@ -133,7 +133,7 @@ export function initContactForm() {
       `Nome: ${nome}`,
       `Telefone: ${formatPhone(telefone)}`,
       `Email: ${email}`,
-      `Servico: ${servico}`,
+      `Serviço: ${servico}`,
       `Mensagem: ${mensagem}`
     ].join('\n');
 
@@ -141,11 +141,11 @@ export function initContactForm() {
     const popup = window.open(url, '_blank', 'noopener,noreferrer');
 
     if (!popup) {
-      setStatus(statusNode, 'Nao foi possivel abrir o WhatsApp automaticamente. Tente novamente.', 'error');
+      setStatus(statusNode, 'Não foi possível abrir o WhatsApp automaticamente. Tente novamente.', 'error');
       return;
     }
 
     form.reset();
-    setStatus(statusNode, 'Solicitacao preparada. Finalize o envio no WhatsApp aberto em nova aba.', 'success');
+    setStatus(statusNode, 'Solicitação preparada. Finalize o envio no WhatsApp aberto em uma nova aba.', 'success');
   });
 }

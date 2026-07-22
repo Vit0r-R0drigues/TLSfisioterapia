@@ -1,0 +1,311 @@
+.brand-forensic-mark {
+  position: relative;
+  flex: 0 0 auto;
+  width: 2.8rem;
+  height: 2.8rem;
+  overflow: hidden;
+  border: 1px solid var(--logo-border);
+  border-radius: 0.8rem;
+  background:
+    linear-gradient(145deg, rgba(122, 165, 194, 0.2), rgba(104, 200, 107, 0.1)),
+    var(--color-surface-strong);
+  box-shadow: var(--logo-shadow);
+}
+
+.brand-forensic-mark::before {
+  content: "";
+  position: absolute;
+  inset: 0.28rem;
+  background: #eef7fa;
+  mask-image: url("../assets/img/logo-forense-dark.png");
+  mask-mode: luminance;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 92% auto;
+}
+
+html[data-theme="light"] .brand-forensic-mark::before {
+  background: #285c7c;
+}
+
+.professional-section {
+  padding-top: clamp(2.5rem, 6vw, 5rem);
+}
+
+.professional-card {
+  overflow: hidden;
+  display: grid;
+  gap: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface-strong);
+  box-shadow: var(--shadow-md);
+}
+
+.professional-copy {
+  display: grid;
+  gap: 1rem;
+  align-content: center;
+  padding: clamp(1.35rem, 5vw, 3rem);
+}
+
+.professional-copy .section-title {
+  display: grid;
+  gap: 0.3rem;
+}
+
+.professional-copy .section-title span {
+  color: var(--color-accent-strong);
+  font-family: "Plus Jakarta Sans", Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.professional-copy > p {
+  color: var(--color-text-700);
+}
+
+.professional-credentials {
+  display: grid;
+  gap: 1rem;
+  align-content: center;
+  padding: clamp(1.35rem, 5vw, 3rem);
+  border-top: 1px solid var(--color-border);
+  background: linear-gradient(145deg, rgba(122, 165, 194, 0.08), rgba(104, 200, 107, 0.06));
+}
+
+.professional-credentials h3 {
+  display: flex;
+  gap: 0.65rem;
+  align-items: center;
+  color: var(--color-primary-900);
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+}
+
+.professional-credentials h3 i {
+  color: var(--color-health-700);
+}
+
+.credential-grid {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.credential-grid li {
+  position: relative;
+  display: grid;
+  grid-template-columns: 0.55rem 1fr;
+  gap: 0.65rem;
+  color: var(--color-text-700);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.credential-grid li::before {
+  content: "";
+  width: 0.38rem;
+  height: 0.38rem;
+  margin-top: 0.48em;
+  border-radius: 50%;
+  background: var(--color-health-700);
+}
+
+.professional-note {
+  padding: 0.85rem 1rem;
+  border-left: 3px solid var(--color-health-700);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  background: rgba(104, 200, 107, 0.08);
+  font-size: 0.88rem;
+}
+
+.deliverables-block {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: clamp(2rem, 6vw, 4rem);
+  padding-top: clamp(1.75rem, 4vw, 3rem);
+  border-top: 1px solid var(--color-border);
+}
+
+.deliverables-heading {
+  max-width: 49rem;
+}
+
+.deliverables-heading h3 {
+  color: var(--color-primary-900);
+  font-family: "Crimson Text", Georgia, serif;
+  font-size: clamp(1.55rem, 3vw, 2rem);
+  line-height: 1.1;
+}
+
+.deliverables-heading p,
+.deliverable p {
+  color: var(--color-text-700);
+}
+
+.deliverables-grid {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.deliverable {
+  position: relative;
+  display: grid;
+  gap: 0.5rem;
+  padding: 1.1rem 1.1rem 1.1rem 1.35rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-strong);
+}
+
+.deliverable::before {
+  content: "";
+  position: absolute;
+  top: 1.15rem;
+  bottom: 1.15rem;
+  left: 0;
+  width: 3px;
+  border-radius: 0 3px 3px 0;
+  background: var(--color-primary-500);
+}
+
+.deliverable strong {
+  color: var(--color-primary-900);
+}
+
+.deliverable p {
+  font-size: 0.88rem;
+}
+
+.practice-grid {
+  grid-template-columns: 1fr;
+}
+
+.method-note {
+  display: grid;
+  gap: 0.35rem;
+  margin-top: 0.25rem;
+  padding: 1rem;
+  border: 1px solid rgba(122, 165, 194, 0.3);
+  border-radius: var(--radius-md);
+  background: rgba(122, 165, 194, 0.08);
+}
+
+.method-note strong {
+  color: var(--color-primary-900);
+}
+
+.method-note span {
+  color: var(--color-text-700);
+  font-size: 0.88rem;
+}
+
+.guidance-section {
+  padding-block: clamp(2.5rem, 6vw, 5rem);
+}
+
+.guidance-card {
+  display: grid;
+  gap: 1.25rem;
+  padding: clamp(1.25rem, 5vw, 2.5rem);
+  border: 1px solid rgba(104, 200, 107, 0.35);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at 92% 10%, rgba(104, 200, 107, 0.14), transparent 17rem),
+    var(--color-surface-strong);
+  box-shadow: var(--shadow-sm);
+}
+
+.guidance-icon {
+  width: 4.5rem;
+  height: 4.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(104, 200, 107, 0.35);
+  border-radius: 50%;
+  color: var(--color-health-700);
+  background: rgba(104, 200, 107, 0.08);
+  font-size: 1.8rem;
+}
+
+.guidance-card > div:last-child {
+  display: grid;
+  gap: 1rem;
+}
+
+.guidance-card p {
+  color: var(--color-text-700);
+}
+
+.guidance-list {
+  display: grid;
+  gap: 0.55rem;
+  color: var(--color-text-700);
+}
+
+.guidance-list li {
+  position: relative;
+  padding-left: 1.15rem;
+}
+
+.guidance-list li::before {
+  content: "";
+  position: absolute;
+  top: 0.68em;
+  left: 0;
+  width: 0.38rem;
+  height: 0.38rem;
+  border-radius: 50%;
+  background: var(--color-health-700);
+}
+
+.contact-identity {
+  font-size: 0.9rem;
+}
+
+@media (min-width: 48rem) {
+  .credential-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .deliverables-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .practice-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .guidance-card {
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: start;
+  }
+}
+
+@media (min-width: 62rem) {
+  .professional-card {
+    grid-template-columns: minmax(0, 1.15fr) minmax(18rem, 0.85fr);
+  }
+
+  .professional-credentials {
+    border-top: 0;
+    border-left: 1px solid var(--color-border);
+  }
+
+  .credential-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .deliverables-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .practice-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

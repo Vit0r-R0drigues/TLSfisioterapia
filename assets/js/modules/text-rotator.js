@@ -2,7 +2,7 @@
   const el = document.querySelector('[data-dynamic-text]');
   if (!el) return;
 
-  const words = ['seguranca', 'autonomia', 'qualidade de vida', 'reabilitacao'];
+  const words = ['segurança', 'autonomia', 'qualidade de vida', 'reabilitação'];
   let index = 0;
 
   const swap = () => {
