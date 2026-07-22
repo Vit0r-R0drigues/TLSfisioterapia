@@ -5,6 +5,7 @@ const FIELD_LIMITS = {
   telefone: 24,
   email: 120,
   servico: 80,
+  bairro: 80,
   mensagem: 800
 };
 
@@ -95,6 +96,7 @@ export function initContactForm() {
     const telefone = normalizePhone(telefoneDigitado);
     const email = sanitizeSingleLine(getFieldValue(form, 'email'), FIELD_LIMITS.email).toLowerCase();
     const servico = sanitizeSingleLine(getFieldValue(form, 'servico'), FIELD_LIMITS.servico);
+    const bairro = sanitizeSingleLine(getFieldValue(form, 'bairro'), FIELD_LIMITS.bairro);
     const mensagem = sanitizeMultiline(getFieldValue(form, 'mensagem'), FIELD_LIMITS.mensagem);
 
     const phoneField = form.elements.telefone;
@@ -127,6 +129,7 @@ export function initContactForm() {
     form.elements.telefone.value = formatPhone(telefone);
     form.elements.email.value = email;
     form.elements.servico.value = servico;
+    if (form.elements.bairro) form.elements.bairro.value = bairro;
     form.elements.mensagem.value = mensagem;
 
     const payload = [
@@ -134,6 +137,7 @@ export function initContactForm() {
       `Telefone: ${formatPhone(telefone)}`,
       `Email: ${email}`,
       `Serviço: ${servico}`,
+      `Bairro: ${bairro || 'não informado'}`,
       `Mensagem: ${mensagem}`
     ].join('\n');
 

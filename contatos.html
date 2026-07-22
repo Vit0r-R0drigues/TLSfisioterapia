@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contato | TLS Fisioterapia</title>
-  <meta name="description" content="Solicite atendimento de fisioterapia domiciliar ou uma análise inicial de fisioterapia forense por WhatsApp, telefone ou formulário.">
+  <title>Contato e Atendimento na Mooca | TLS Fisioterapia</title>
+  <meta name="description" content="Consulte fisioterapia domiciliar na Mooca e região central de São Paulo ou solicite uma análise inicial de fisioterapia forense.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://tlsfisioterapia.com.br/contatos.html">
 
@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="./assets/css/components.css?v=20260721c">
   <link rel="stylesheet" href="./assets/css/contatos.css">
 
-  <script type="module" src="./assets/js/main.js?v=20260721"></script>
+  <script type="module" src="./assets/js/main.js?v=20260721b"></script>
 
   <script type="application/ld+json">
   {
@@ -44,10 +44,24 @@
     "name": "Contato | TLS Fisioterapia",
     "url": "https://tlsfisioterapia.com.br/contatos.html",
     "mainEntity": {
-      "@type": "MedicalBusiness",
+      "@type": "MedicalOrganization",
+      "@id": "https://tlsfisioterapia.com.br/#organizacao",
       "name": "TLS Fisioterapia",
       "telephone": "+55-11-99911-5387",
-      "email": "thauanefisio1@gmail.com"
+      "email": "thauanefisio1@gmail.com",
+      "areaServed": [
+        "Mooca",
+        "Cambuci",
+        "Aclimação",
+        "Ipiranga",
+        "Vila Monumento",
+        "Vila Prudente",
+        "Belém",
+        "Brás",
+        "Paraíso",
+        "Bela Vista",
+        "Consolação"
+      ]
     }
   }
   </script>
@@ -115,6 +129,11 @@
             <span>Identificação da empresa</span>
             <strong>CNPJ 52.811.773/0001-51</strong>
           </article>
+          <article class="contact-item">
+            <span>Atendimento domiciliar</span>
+            <strong>Mooca e bairros próximos</strong>
+            <a href="./fisioterapia-domiciliar-mooca/">Ver regiões atendidas</a>
+          </article>
           <a class="btn btn-whatsapp" href="https://api.whatsapp.com/send/?phone=5511999115387&text=Ol%C3%A1!%20Gostaria%20de%20falar%20sobre%20um%20servi%C3%A7o%20da%20TLS%20Fisioterapia." target="_blank" rel="noopener noreferrer">
             <i class="fi fi-rr-comment-alt"></i> Abrir WhatsApp
           </a>
@@ -150,6 +169,10 @@
               </select>
             </div>
             <div class="field">
+              <label for="bairro">Bairro <span class="text-muted">(para atendimento domiciliar)</span></label>
+              <input id="bairro" name="bairro" type="text" autocomplete="address-level3" maxlength="80" placeholder="Ex.: Mooca, Cambuci ou Ipiranga">
+            </div>
+            <div class="field">
               <label for="mensagem">Mensagem</label>
               <textarea id="mensagem" name="mensagem" minlength="8" maxlength="800" required placeholder="Domiciliar: descreva a necessidade principal. Forense: informe área, sua relação com o caso, fase e prazo, sem anexar dados sensíveis."></textarea>
             </div>
@@ -174,6 +197,7 @@
           <li><a href="./index.html">Início</a></li>
           <li><a href="./HTML/index.html">Sobre</a></li>
           <li><a href="./HTML/servicos.html">Serviços</a></li>
+          <li><a href="./fisioterapia-domiciliar-mooca/">Regiões atendidas</a></li>
           <li><a href="./fisioterapia-forense/">Fisioterapia Forense</a></li>
           <li><a href="./tools/calculadoras.html">Calculadoras</a></li>
           <li><a href="./politica-de-privacidade.html">Política de privacidade</a></li>

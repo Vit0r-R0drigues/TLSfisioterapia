@@ -413,6 +413,40 @@ html[data-theme="light"] .hero-path-forensic .hero-path-topics .fi {
   font-weight: 700;
 }
 
+.local-home-grid {
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+}
+
+.local-home-card {
+  display: grid;
+  gap: 0.75rem;
+  border-top: 3px solid var(--color-health-500);
+}
+
+.local-home-card > strong {
+  color: var(--color-primary-900);
+  font-family: "Crimson Text", Georgia, serif;
+  font-size: 1.6rem;
+}
+
+.local-home-list {
+  display: grid;
+  gap: 0.55rem;
+  color: var(--color-text-700);
+}
+
+.local-home-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.local-home-list .fi {
+  color: var(--color-accent-strong);
+}
+
 @media (min-width: 62rem) {
   .hero-choices {
     grid-template-columns: minmax(0, 1fr) clamp(1.5rem, 4vw, 3.5rem) minmax(0, 1fr);
@@ -465,6 +499,11 @@ html[data-theme="light"] .hero-path-forensic .hero-path-topics .fi {
 
   .cta-cards {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .local-home-grid {
+    grid-template-columns: minmax(0, 1.45fr) minmax(18rem, 0.75fr);
+    gap: clamp(1.5rem, 4vw, 3.5rem);
   }
 }
 

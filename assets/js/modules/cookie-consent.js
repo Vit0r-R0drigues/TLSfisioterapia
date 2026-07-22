@@ -9,7 +9,7 @@ let closeTimer = null;
 
 function getPolicyPrefix() {
   const path = window.location.pathname;
-  const isNestedPage = /\/(Agradecimento|BLOG|HTML|INSTAGRAM|landingpages|tools)\//.test(path);
+  const isNestedPage = /\/(Agradecimento|BLOG|HTML|INSTAGRAM|landingpages|tools|fisioterapia-forense|fisioterapia-domiciliar-mooca)\//.test(path);
   return isNestedPage ? '../' : './';
 }
 
