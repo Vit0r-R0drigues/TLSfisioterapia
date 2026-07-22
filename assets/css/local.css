@@ -1,0 +1,222 @@
+.local-hero {
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(2.6rem, 7vw, 5.6rem);
+  background:
+    radial-gradient(circle at 12% 18%, rgba(104, 200, 107, 0.16), transparent 34%),
+    radial-gradient(circle at 90% 75%, rgba(122, 165, 194, 0.16), transparent 38%);
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  color: var(--color-text-500);
+  font-size: 0.82rem;
+}
+
+.breadcrumbs a {
+  color: var(--color-text-700);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.local-hero-grid {
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+}
+
+.local-hero-copy {
+  display: grid;
+  gap: 1rem;
+}
+
+.local-hero-copy .page-title {
+  max-width: 16ch;
+}
+
+.local-hero-copy .page-subtitle {
+  max-width: 58ch;
+}
+
+.local-summary {
+  display: grid;
+  gap: 0.9rem;
+  border-top: 3px solid var(--color-health-500);
+  padding: clamp(1.1rem, 3vw, 1.6rem);
+}
+
+.local-summary-head {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.local-summary-head strong {
+  color: var(--color-primary-900);
+  font-size: 1.05rem;
+}
+
+.fact-list,
+.check-list,
+.area-list {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.fact-list li,
+.check-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  color: var(--color-text-700);
+}
+
+.fact-list .fi,
+.check-list .fi {
+  flex: 0 0 auto;
+  margin-top: 0.25rem;
+  color: var(--color-accent-strong);
+}
+
+.area-groups {
+  display: grid;
+  gap: 1rem;
+}
+
+.area-card {
+  display: grid;
+  align-content: start;
+  gap: 0.7rem;
+}
+
+.area-card h3 {
+  color: var(--color-primary-900);
+  font-size: 1.05rem;
+}
+
+.area-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.area-list li {
+  min-width: 0;
+  padding: 0.45rem 0.6rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  color: var(--color-text-700);
+  font-size: 0.86rem;
+  text-align: center;
+  background: var(--color-surface);
+}
+
+.coverage-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  padding: 0.9rem;
+  border-left: 3px solid var(--color-primary-500);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  color: var(--color-text-700);
+  background: rgba(122, 165, 194, 0.1);
+}
+
+.coverage-note .fi {
+  flex: 0 0 auto;
+  margin-top: 0.2rem;
+  color: var(--color-primary-700);
+}
+
+.steps-grid {
+  display: grid;
+  gap: 1rem;
+  counter-reset: local-step;
+}
+
+.step-card {
+  position: relative;
+  display: grid;
+  gap: 0.55rem;
+  padding-top: 3.5rem;
+  counter-increment: local-step;
+}
+
+.step-card::before {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  content: counter(local-step);
+  color: #fff;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--color-health-700), var(--color-health-500));
+}
+
+.step-card h3,
+.service-local-card h3 {
+  color: var(--color-primary-900);
+  font-size: 1.05rem;
+}
+
+.service-local-card {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.faq-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.faq-list details {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-strong);
+  padding: 0.9rem 1rem;
+}
+
+.faq-list summary {
+  color: var(--color-primary-900);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.faq-list details p {
+  padding-top: 0.7rem;
+  color: var(--color-text-700);
+}
+
+.local-cta {
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+  border: 1px solid rgba(104, 200, 107, 0.38);
+  background: linear-gradient(135deg, rgba(104, 200, 107, 0.16), rgba(122, 165, 194, 0.12));
+}
+
+@media (min-width: 48rem) {
+  .local-hero-grid {
+    grid-template-columns: minmax(0, 1.45fr) minmax(18rem, 0.75fr);
+  }
+
+  .area-groups,
+  .steps-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .local-cta {
+    grid-template-columns: minmax(0, 1fr) auto;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 24rem) {
+  .area-list {
+    grid-template-columns: 1fr;
+  }
+}
