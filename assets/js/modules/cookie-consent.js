@@ -100,10 +100,10 @@ function createBanner() {
     <div class="cookie-head">
       <span class="cookie-head-icon" aria-hidden="true"><i class="fi fi-rr-cookie"></i></span>
       <div class="cookie-head-content">
-        <strong class="cookie-head-title">Preferencias de privacidade</strong>
+        <strong class="cookie-head-title">Preferências de privacidade</strong>
         <p>
-          Utilizamos cookies necessarios e, com sua permissao, cookies analiticos para melhorar o site.
-          Leia a <a href="${privacyHref}">Politica de Privacidade</a> e a <a href="${cookiesHref}">Politica de Cookies</a>.
+          Utilizamos cookies necessários e, com sua permissão, cookies analíticos para melhorar o site.
+          Leia a <a href="${privacyHref}">Política de Privacidade</a> e a <a href="${cookiesHref}">Política de Cookies</a>.
         </p>
       </div>
     </div>
@@ -115,7 +115,7 @@ function createBanner() {
       </button>
       <button type="button" class="cookie-btn cookie-btn-ghost" data-cookie-toggle aria-controls="${PANEL_ID}" aria-expanded="false">
         <i class="fi fi-rr-settings-sliders" aria-hidden="true"></i>
-        <span>Preferencias</span>
+        <span>Preferências</span>
       </button>
       <button type="button" class="cookie-btn cookie-btn-primary" data-cookie-accept>
         <i class="fi fi-rr-check" aria-hidden="true"></i>
@@ -125,13 +125,13 @@ function createBanner() {
     <div class="cookie-preferences" id="${PANEL_ID}" data-cookie-panel hidden>
       <label class="cookie-check">
         <input type="checkbox" checked disabled>
-        <span><strong>Cookies necessarios</strong><small>Essenciais para funcionamento do site.</small></span>
+        <span><strong>Cookies necessários</strong><small>Essenciais para o funcionamento do site.</small></span>
       </label>
       <label class="cookie-check">
         <input type="checkbox" data-cookie-analytics>
-        <span><strong>Cookies analiticos</strong><small>Permitem analise de uso para melhorias.</small></span>
+        <span><strong>Cookies analíticos</strong><small>Permitem a análise de uso para melhorias.</small></span>
       </label>
-      <button type="button" class="cookie-btn cookie-btn-primary cookie-save" data-cookie-save>Salvar preferencias</button>
+      <button type="button" class="cookie-btn cookie-btn-primary cookie-save" data-cookie-save>Salvar preferências</button>
     </div>
   `;
 
@@ -156,13 +156,13 @@ function createManageButton() {
 
 function getManageButtonText(consent) {
   if (!consent) return 'Configurar cookies';
-  return consent.analytics ? 'Cookies aceitos' : 'Cookies minimos';
+  return consent.analytics ? 'Cookies aceitos' : 'Cookies mínimos';
 }
 
 function getManageButtonAria(consent) {
   if (!consent) return 'Gerenciar cookies';
   if (consent.analytics) return 'Gerenciar cookies. Analytics ativado.';
-  return 'Gerenciar cookies. Apenas cookies necessarios ativos.';
+  return 'Gerenciar cookies. Apenas cookies necessários ativos.';
 }
 
 function updateManageButton(manage, consent) {
@@ -257,7 +257,7 @@ export function initCookieConsent() {
       banner,
       manage,
       analyticsEnabled: false,
-      message: 'Preferencia salva: apenas cookies necessarios ativos.'
+      message: 'Preferência salva: apenas cookies necessários ativos.'
     });
     setPanelState(panel, toggle, false);
   });
@@ -267,7 +267,7 @@ export function initCookieConsent() {
       banner,
       manage,
       analyticsEnabled: true,
-      message: 'Preferencia salva: cookies analiticos ativados.'
+      message: 'Preferência salva: cookies analíticos ativados.'
     });
     setPanelState(panel, toggle, false);
     analyticsInput.checked = true;
@@ -285,8 +285,8 @@ export function initCookieConsent() {
       manage,
       analyticsEnabled,
       message: analyticsEnabled
-        ? 'Preferencias salvas com analytics habilitado.'
-        : 'Preferencias salvas com apenas cookies necessarios.'
+        ? 'Preferências salvas com cookies analíticos habilitados.'
+        : 'Preferências salvas apenas com os cookies necessários.'
     });
     setPanelState(panel, toggle, false);
   });

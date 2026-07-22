@@ -20,7 +20,7 @@ export function initCalculators() {
       const alturaCm = asNumber(imcForm.elements.altura.value);
 
       if (peso <= 0 || alturaCm <= 0 || Number.isNaN(peso) || Number.isNaN(alturaCm)) {
-        setResult(imcResult, 'Informe peso e altura validos.', true);
+        setResult(imcResult, 'Informe peso e altura válidos.', true);
         return;
       }
 
@@ -46,14 +46,14 @@ export function initCalculators() {
       const fator = asNumber(hydrationForm.elements.fator.value);
 
       if (peso <= 0 || fator <= 0 || Number.isNaN(peso) || Number.isNaN(fator)) {
-        setResult(hydrationResult, 'Informe valores validos.', true);
+        setResult(hydrationResult, 'Informe valores válidos.', true);
         return;
       }
 
       const totalMl = peso * fator;
       const totalLitros = totalMl / 1000;
 
-      setResult(hydrationResult, `Ingestao diaria estimada: ${totalLitros.toFixed(2)} litros de agua.`);
+      setResult(hydrationResult, `Ingestão diária estimada: ${totalLitros.toFixed(2)} litros de água. Este valor é apenas educativo e pode precisar de ajuste profissional.`);
     });
   }
 }
