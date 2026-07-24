@@ -117,11 +117,15 @@
   width: 100%;
   aspect-ratio: 1;
   background: #ffffff;
+  -webkit-mask-image: url("../img/logo-forense-dark.png");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: 145% auto;
   mask-image: url("../img/logo-forense-dark.png");
   mask-mode: luminance;
   mask-repeat: no-repeat;
   mask-position: center;
-  mask-size: contain;
+  mask-size: 145% auto;
   opacity: 0.88;
 }
 
@@ -268,6 +272,8 @@ html[data-theme="light"] .hero-path-forensic .hero-path-topics .fi {
   display: inline-flex;
   align-items: center;
   gap: 0.42rem;
+  min-height: 2.75rem;
+  padding-block: 0.35rem;
   color: var(--color-text-700);
   font-size: 0.88rem;
   font-weight: 700;
@@ -363,7 +369,7 @@ html[data-theme="light"] .hero-path-forensic .hero-path-topics .fi {
 }
 
 .review-stars {
-  color: #ebbd28;
+  color: var(--color-review-star);
   letter-spacing: 0.1em;
   font-size: 1rem;
 }

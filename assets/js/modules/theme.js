@@ -26,11 +26,15 @@ function updateToggleButton(button, theme) {
   const isDark = theme === DARK;
   const icon = button.querySelector('[data-theme-icon]');
 
-  button.setAttribute('aria-pressed', String(isDark));
+  button.removeAttribute('aria-pressed');
   button.setAttribute('aria-label', isDark ? 'Ativar tema claro' : 'Ativar tema escuro');
   button.title = isDark ? 'Ativar tema claro' : 'Ativar tema escuro';
 
-  if (icon) icon.textContent = isDark ? 'L' : 'D';
+  if (icon) {
+    icon.className = isDark
+      ? 'fi fi-rr-brightness theme-toggle-icon'
+      : 'fi fi-rr-moon theme-toggle-icon';
+  }
 }
 
 function buildToggleButton() {
@@ -39,19 +43,53 @@ function buildToggleButton() {
   button.className = 'theme-toggle';
   button.dataset.themeToggle = 'true';
   button.innerHTML =
-    '<span class="theme-toggle-icon" data-theme-icon aria-hidden="true">L</span>' +
+    '<i class="fi fi-rr-brightness theme-toggle-icon" data-theme-icon aria-hidden="true"></i>' +
     '<span class="theme-toggle-text">Tema</span>';
   return button;
 }
 
 function mountToggle(button) {
-  button.classList.add('theme-toggle-floating');
-  document.body.append(button);
+  const navList = document.querySelector('.nav-list');
+
+  if (!navList) {
+    const footer = document.querySelector('.footer-base .container');
+    if (footer) {
+      button.classList.add('footer-utility');
+      footer.append(button);
+    } else {
+      button.classList.add('theme-toggle-floating');
+      document.body.append(button);
+    }
+    return;
+  }
+
+  const item = document.createElement('li');
+  item.className = 'nav-utility nav-theme-item';
+  const mobileNavigation = window.matchMedia('(max-width: 74.999rem)');
+
+  const syncPosition = () => {
+    if (mobileNavigation.matches) {
+      button.classList.remove('theme-toggle-floating');
+      item.append(button);
+      if (!item.isConnected) navList.append(item);
+      return;
+    }
+
+    if (item.isConnected) item.remove();
+    button.classList.add('theme-toggle-floating');
+    document.body.append(button);
+  };
+
+  syncPosition();
+  mobileNavigation.addEventListener?.('change', syncPosition);
 }
 
 export function initTheme() {
   const storedTheme = getStoredTheme();
-  const initialTheme = storedTheme === DARK || storedTheme === LIGHT ? storedTheme : DARK;
+  const preloadedTheme = document.documentElement.getAttribute('data-theme');
+  const initialTheme = storedTheme === DARK || storedTheme === LIGHT
+    ? storedTheme
+    : (preloadedTheme === LIGHT ? LIGHT : DARK);
   applyTheme(initialTheme);
 
   if (document.querySelector('[data-theme-toggle]')) return;

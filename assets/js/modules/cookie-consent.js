@@ -150,8 +150,43 @@ function createManageButton() {
     <i class="fi fi-rr-cookie" aria-hidden="true"></i>
     <span data-cookie-manage-label>Configurar cookies</span>
   `;
-  document.body.append(button);
   return button;
+}
+
+function mountManageButton(button) {
+  const navList = document.querySelector('.nav-list');
+
+  if (!navList) {
+    const footer = document.querySelector('.footer-base .container');
+    if (footer) {
+      button.classList.add('footer-utility');
+      footer.append(button);
+    } else {
+      button.classList.add('cookie-manage-floating');
+      document.body.append(button);
+    }
+    return;
+  }
+
+  const item = document.createElement('li');
+  item.className = 'nav-utility nav-cookie-item';
+  const mobileNavigation = window.matchMedia('(max-width: 74.999rem)');
+
+  const syncPosition = () => {
+    if (mobileNavigation.matches) {
+      button.classList.remove('cookie-manage-floating');
+      item.append(button);
+      if (!item.isConnected) navList.append(item);
+      return;
+    }
+
+    if (item.isConnected) item.remove();
+    button.classList.add('cookie-manage-floating');
+    document.body.append(button);
+  };
+
+  syncPosition();
+  mobileNavigation.addEventListener?.('change', syncPosition);
 }
 
 function getManageButtonText(consent) {
@@ -200,12 +235,16 @@ function showBanner(banner) {
   window.requestAnimationFrame(() => banner.classList.add('is-visible'));
 }
 
-function hideBanner(banner) {
+function hideBanner(banner, focusTarget = null) {
   clearCloseTimer();
   banner.classList.remove('is-visible');
   banner.setAttribute('aria-hidden', 'true');
   window.setTimeout(() => {
-    if (!banner.classList.contains('is-visible')) banner.hidden = true;
+    if (banner.classList.contains('is-visible')) return;
+    banner.hidden = true;
+    if (focusTarget instanceof HTMLElement && document.contains(focusTarget)) {
+      focusTarget.focus();
+    }
   }, HIDE_DELAY_MS);
 }
 
@@ -218,6 +257,24 @@ function syncAnalyticsInput(input, consent) {
   input.checked = Boolean(consent && consent.analytics);
 }
 
+function getFocusReturnTarget(manage) {
+  const manageRect = manage.getBoundingClientRect();
+  if (manageRect.width && manageRect.height && manageRect.bottom > 0 && manageRect.top < window.innerHeight) {
+    return manage;
+  }
+
+  const menuToggle = document.querySelector('[data-menu-toggle]');
+  if (menuToggle instanceof HTMLElement) return menuToggle;
+
+  const heading = document.querySelector('h1');
+  if (heading instanceof HTMLElement) {
+    if (!heading.hasAttribute('tabindex')) heading.setAttribute('tabindex', '-1');
+    return heading;
+  }
+
+  return null;
+}
+
 function saveAndClose({ banner, manage, analyticsEnabled, message }) {
   writeConsent(analyticsEnabled);
   if (analyticsEnabled) initAnalytics();
@@ -228,7 +285,7 @@ function saveAndClose({ banner, manage, analyticsEnabled, message }) {
   updateManageButton(manage, consent);
   setFeedback(banner, message, analyticsEnabled ? 'success' : 'info');
   closeTimer = window.setTimeout(() => {
-    hideBanner(banner);
+    hideBanner(banner, getFocusReturnTarget(manage));
   }, ACTION_FEEDBACK_MS);
 }
 
@@ -238,6 +295,7 @@ export function initCookieConsent() {
 
   const banner = document.querySelector('[data-cookie-banner]') || createBanner();
   const manage = document.querySelector('[data-cookie-manage]') || createManageButton();
+  if (!manage.isConnected) mountManageButton(manage);
 
   const reject = banner.querySelector('[data-cookie-reject]');
   const accept = banner.querySelector('[data-cookie-accept]');
@@ -312,6 +370,6 @@ export function initCookieConsent() {
     if (event.key !== 'Escape') return;
     if (!readConsent()) return;
     setPanelState(panel, toggle, false);
-    hideBanner(banner);
+    hideBanner(banner, getFocusReturnTarget(manage));
   });
 }

@@ -3,6 +3,13 @@
   gap: 1rem;
 }
 
+.contact-layout > *,
+.form-card,
+.form-grid,
+.field {
+  min-width: 0;
+}
+
 .contact-info-card {
   display: grid;
   gap: 0.8rem;
@@ -20,6 +27,17 @@
 .contact-item span {
   color: var(--color-text-500);
   font-size: 0.82rem;
+}
+
+.contact-item a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  width: fit-content;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
 }
 
 .form-card {
@@ -46,11 +64,20 @@
 .field input,
 .field textarea,
 .field select {
-  border: 1px solid var(--color-border);
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  border: 2px solid var(--color-control-border);
   border-radius: 0.75rem;
   min-height: 3rem;
   padding: 0.65rem 0.75rem;
   background: var(--color-surface-strong);
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: var(--color-text-700);
+  opacity: 1;
 }
 
 .field textarea {
@@ -61,8 +88,9 @@
 .field input:focus,
 .field textarea:focus,
 .field select:focus {
-  outline: 2px solid rgba(64, 168, 63, 0.32);
-  border-color: var(--color-health-700);
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+  border-color: var(--color-control-border);
 }
 
 .form-status {
@@ -72,7 +100,7 @@
 }
 
 .form-status.success {
-  color: var(--color-health-600);
+  color: var(--color-accent-strong);
 }
 
 .form-status.error {

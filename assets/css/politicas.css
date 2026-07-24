@@ -43,8 +43,22 @@
   color: var(--color-text-700);
 }
 
+.policy-card a {
+  color: var(--color-primary-700);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.policy-card a:focus-visible,
+.policy-table-wrap:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
 .policy-table-wrap {
   overflow-x: auto;
+  border-radius: var(--radius-sm);
+  scrollbar-color: var(--color-primary-500) var(--color-surface);
 }
 
 .policy-table {

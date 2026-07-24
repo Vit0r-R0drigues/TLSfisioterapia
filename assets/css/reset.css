@@ -28,6 +28,10 @@ video {
   max-width: 100%;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 a {
   text-decoration: none;
   color: inherit;

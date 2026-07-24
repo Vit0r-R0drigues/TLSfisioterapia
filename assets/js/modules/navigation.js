@@ -38,13 +38,13 @@ export function initNavigation() {
   });
 
   document.addEventListener('keydown', (event) => {
-    if (event.key !== 'Escape') return;
+    if (event.key !== 'Escape' || !nav.classList.contains('open')) return;
     updateState(false);
     toggle.focus();
   });
 
   window.addEventListener('resize', () => {
-    if (window.matchMedia('(min-width: 64rem)').matches) {
+    if (window.matchMedia('(min-width: 75rem)').matches) {
       updateState(false);
     }
   });
