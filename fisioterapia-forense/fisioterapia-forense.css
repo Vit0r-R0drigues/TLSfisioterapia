@@ -26,6 +26,10 @@
   width: 100%;
   aspect-ratio: 1;
   background: #ffffff;
+  -webkit-mask-image: url("../assets/img/logo-forense-dark.png");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
   mask-image: url("../assets/img/logo-forense-dark.png");
   mask-mode: luminance;
   mask-repeat: no-repeat;

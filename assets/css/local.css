@@ -152,7 +152,7 @@
   height: 2rem;
   border-radius: 999px;
   content: counter(local-step);
-  color: #fff;
+  color: var(--color-on-health);
   font-weight: 800;
   background: linear-gradient(135deg, var(--color-health-700), var(--color-health-500));
 }
@@ -181,6 +181,10 @@
 }
 
 .faq-list summary {
+  display: flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding-block: 0.55rem;
   color: var(--color-primary-900);
   font-weight: 700;
   cursor: pointer;

@@ -17,11 +17,15 @@
   position: absolute;
   inset: 0.28rem;
   background: #eef7fa;
+  -webkit-mask-image: url("../assets/img/logo-forense-dark.png");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: 155% auto;
   mask-image: url("../assets/img/logo-forense-dark.png");
   mask-mode: luminance;
   mask-repeat: no-repeat;
   mask-position: center;
-  mask-size: 92% auto;
+  mask-size: 155% auto;
 }
 
 html[data-theme="light"] .brand-forensic-mark::before {
