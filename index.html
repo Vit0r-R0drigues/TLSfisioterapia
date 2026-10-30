@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self' https://api.whatsapp.com; script-src 'self' https://www.googletagmanager.com; style-src 'self' https://fonts.googleapis.com https://cdn-uicons.flaticon.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com https://cdn-uicons.flaticon.com; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com; upgrade-insecure-requests">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <title>TLS Fisioterapia | Domiciliar na Mooca e Forense em São Paulo</title>
-  <meta name="description" content="Fisioterapia domiciliar na Mooca e bairros da região central de São Paulo, além de atuação forense previdenciária e trabalhista.">
+  <title>TLS Fisioterapia | Domiciliar, Presencial e Forense em São Paulo</title>
+  <meta name="description" content="Fisioterapia domiciliar na Mooca e bairros próximos, atendimento presencial em consultórios Livance em São Paulo e Santo André, teleconsulta e fisioterapia forense.">
   <meta name="keywords" content="fisioterapia domiciliar Mooca, fisioterapeuta Mooca, fisioterapia domiciliar Cambuci, fisioterapia domiciliar Ipiranga, fisioterapia Avenida Paulista, fisioterapia forense">
   <meta name="author" content="TLS Fisioterapia">
   <meta name="robots" content="index, follow">
@@ -36,13 +36,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Alef:wght@400;700&amp;family=Allura&amp;family=Crimson+Text:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
 
-  <script src="./assets/js/theme-preload.js?v=20261030e"></script>
-  <link rel="stylesheet" href="./assets/css/reset.css?v=20261030e">
-  <link rel="stylesheet" href="./assets/css/layout.css?v=20261030e">
-  <link rel="stylesheet" href="./assets/css/components.css?v=20261030e">
-  <link rel="stylesheet" href="./assets/css/home.css?v=20261030e">
+  <script src="./assets/js/theme-preload.js?v=20261030h"></script>
+  <link rel="stylesheet" href="./assets/css/reset.css?v=20261030h">
+  <link rel="stylesheet" href="./assets/css/layout.css?v=20261030h">
+  <link rel="stylesheet" href="./assets/css/components.css?v=20261030h">
+  <link rel="stylesheet" href="./assets/css/home.css?v=20261030h">
 
-  <script type="module" src="./assets/js/main.js?v=20261030e"></script>
+  <script type="module" src="./assets/js/main.js?v=20261030h"></script>
 
   <script type="application/ld+json">
   {
@@ -126,14 +126,15 @@
       <nav class="nav" id="menu-principal" data-nav aria-label="Menu principal">
         <ul class="nav-list">
           <li><a class="nav-link" href="./index.html" aria-current="page"><i class="fi fi-rr-home" aria-hidden="true"></i>Início</a></li>
-          <li><a class="nav-link" href="./HTML/index.html"><i class="fi fi-rr-info" aria-hidden="true"></i>Sobre</a></li>
-          <li><a class="nav-link" href="./HTML/servicos.html"><i class="fi fi-rr-briefcase" aria-hidden="true"></i>Serviços</a></li>
+          <li><a class="nav-link" href="./sobre/"><i class="fi fi-rr-info" aria-hidden="true"></i>Sobre</a></li>
+          <li><a class="nav-link" href="./servicos/"><i class="fi fi-rr-briefcase" aria-hidden="true"></i>Serviços</a></li>
+          <li><a class="nav-link" href="./unidades/"><i class="fi fi-rr-marker" aria-hidden="true"></i>Unidades</a></li>
           <li><a class="nav-link" href="./fisioterapia-forense/"><i class="fi fi-rr-document-signed" aria-hidden="true"></i>Forense</a></li>
           <li><a class="nav-link" href="./contatos.html"><i class="fi fi-rr-phone-call" aria-hidden="true"></i>Contato</a></li>
         </ul>
       </nav>
 
-      <a class="header-cta" href="https://api.whatsapp.com/send/?phone=5511999115387&amp;text=Ol%C3%A1!%20Gostaria%20de%20falar%20sobre%20um%20servi%C3%A7o%20da%20TLS%20Fisioterapia." target="_blank" rel="noopener noreferrer">Falar com a TLS</a>
+      <a class="header-cta" href="https://api.whatsapp.com/send/?phone=5511999115387&amp;text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." data-booking data-position="cabecalho" target="_blank" rel="noopener noreferrer">Agendar avaliação</a>
 
       <div class="social-mini" aria-label="Redes sociais">
         <a href="https://www.instagram.com/thaune_fisio/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fi fi-rr-camera" aria-hidden="true"></i></a>
@@ -152,6 +153,11 @@
           </h1>
           <p class="page-subtitle">Escolha o atendimento que corresponde à sua necessidade.</p>
           <p class="hero-credential">Fisioterapeuta · CREFITO 310481-F</p>
+          <p class="hero-modes">Atendimento domiciliar, presencial em unidades Livance, teleconsulta e fisioterapia forense.</p>
+          <div class="hero-actions hero-booking">
+            <a class="btn btn-primary btn-booking" href="https://api.whatsapp.com/send/?phone=5511999115387&amp;text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." data-booking data-position="topo_home" target="_blank" rel="noopener noreferrer"><i class="fi fi-rr-calendar-check" aria-hidden="true"></i> Ver horários disponíveis</a>
+            <a class="btn btn-secondary" href="./unidades/"><i class="fi fi-rr-marker" aria-hidden="true"></i> Ver unidades</a>
+          </div>
         </header>
 
         <div class="hero-choices">
@@ -208,7 +214,7 @@
     <section class="section" aria-labelledby="profissional-title">
       <div class="container profile-intro">
         <figure class="profile-photo reveal">
-          <img src="./assets/img/thauane-lima.jpg" width="400" height="500" alt="Thauane Lima, fisioterapeuta" loading="lazy" decoding="async">
+          <picture><source srcset="./assets/img/thauane-lima.webp" type="image/webp"><img src="./assets/img/thauane-lima.jpg" width="400" height="500" alt="Thauane Lima, fisioterapeuta" loading="lazy" decoding="async"></picture>
         </figure>
         <div class="stack reveal">
           <span class="page-kicker"><i class="fi fi-rr-user" aria-hidden="true"></i> Quem vai até a sua casa</span>
@@ -220,13 +226,48 @@
             <li><i class="fi fi-rr-check" aria-hidden="true"></i><span>Experiência com pacientes de alta complexidade e cuidados paliativos</span></li>
           </ul>
           <div class="hero-actions">
-            <a class="btn btn-secondary" href="./HTML/index.html">Conhecer a profissional</a>
+            <a class="btn btn-secondary" href="./sobre/">Conhecer a profissional</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section section-alt">
+    <section class="section section-alt" aria-labelledby="formas-title">
+      <div class="container stack">
+        <header class="stack reveal">
+          <span class="page-kicker"><i class="fi fi-rr-calendar-check" aria-hidden="true"></i> Formas de atendimento</span>
+          <h2 class="section-title" id="formas-title">Escolha onde ser atendido</h2>
+        </header>
+        <div class="grid-4">
+          <article class="card mode-card reveal">
+            <span class="icon-round"><i class="fi fi-rr-home" aria-hidden="true"></i></span>
+            <h3>Em casa</h3>
+            <p class="text-muted">Fisioterapia domiciliar na Mooca e em bairros próximos de São Paulo.</p>
+            <a class="btn btn-secondary" href="./fisioterapia-domiciliar-mooca/">Ver bairros atendidos</a>
+          </article>
+          <article class="card mode-card reveal">
+            <span class="icon-round"><i class="fi fi-rr-marker" aria-hidden="true"></i></span>
+            <h3>Presencial em unidades</h3>
+            <p class="text-muted">Consultórios Livance na Paulista, Brigadeiro, Ibirapuera, Vila Mariana e Santo André, mediante agendamento.</p>
+            <a class="btn btn-primary btn-booking" href="https://api.whatsapp.com/send/?phone=5511999115387&amp;text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." data-booking data-service="presencial" data-position="formas_atendimento" target="_blank" rel="noopener noreferrer"><i class="fi fi-rr-calendar-check" aria-hidden="true"></i> Agendar atendimento presencial</a>
+          </article>
+          <article class="card mode-card reveal">
+            <span class="icon-round"><i class="fi fi-rr-video-camera-alt" aria-hidden="true"></i></span>
+            <h3>Teleconsulta</h3>
+            <p class="text-muted">Orientação e acompanhamento por vídeo, quando a avaliação indicar que é adequado.</p>
+            <a class="btn btn-primary btn-booking" href="https://api.whatsapp.com/send/?phone=5511999115387&amp;text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20teleconsulta." data-booking data-service="teleconsulta" data-position="formas_atendimento" target="_blank" rel="noopener noreferrer"><i class="fi fi-rr-calendar-check" aria-hidden="true"></i> Agendar teleconsulta</a>
+          </article>
+          <article class="card mode-card reveal">
+            <span class="icon-round"><i class="fi fi-rr-document-signed" aria-hidden="true"></i></span>
+            <h3>Fisioterapia forense</h3>
+            <p class="text-muted">Análise técnico-fisioterapêutica para processos trabalhistas e previdenciários.</p>
+            <a class="btn btn-secondary" href="./fisioterapia-forense/">Conhecer a atuação forense</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
       <div class="container stack">
         <header class="stack reveal">
           <span class="page-kicker"><i class="fi fi-rr-star" aria-hidden="true"></i> Diferenciais</span>
@@ -261,22 +302,22 @@
 
         <div class="grid-3">
           <article class="card services-card reveal">
-            <img src="./assets/img/servicos-home-care.jpg" alt="Atendimento fisioterapêutico traumato-ortopédico no domicílio" loading="lazy" decoding="async">
+            <picture><source srcset="./assets/img/servicos-home-care.webp" type="image/webp"><img src="./assets/img/servicos-home-care.jpg" width="900" height="514" alt="Atendimento fisioterapêutico traumato-ortopédico no domicílio" loading="lazy" decoding="async"></picture>
             <h3>Atendimento traumato-ortopédico</h3>
             <p class="text-muted">Reabilitação pós-cirúrgica, cuidado de dores articulares e fortalecimento funcional.</p>
-            <a class="btn btn-secondary" href="./HTML/servicos.html">Ver serviços</a>
+            <a class="btn btn-secondary" href="./servicos/">Ver serviços</a>
           </article>
           <article class="card services-card reveal">
-            <img src="./assets/img/sobre-home-care.jpg" alt="Acompanhamento fisioterapêutico para idosos" loading="lazy" decoding="async">
+            <picture><source srcset="./assets/img/sobre-home-care.webp" type="image/webp"><img src="./assets/img/sobre-home-care.jpg" width="900" height="514" alt="Acompanhamento fisioterapêutico para idosos" loading="lazy" decoding="async"></picture>
             <h3>Fisioterapia geriátrica e neurofuncional</h3>
             <p class="text-muted">Treino de equilíbrio, mobilidade, marcha e prevenção de quedas.</p>
-            <a class="btn btn-secondary" href="./HTML/servicos.html">Ver serviços</a>
+            <a class="btn btn-secondary" href="./servicos/">Ver serviços</a>
           </article>
           <article class="card services-card reveal">
-            <img src="./assets/img/profissional-home-care.jpg" alt="Fisioterapeuta orientando paciente em atendimento domiciliar" loading="lazy" decoding="async">
+            <picture><source srcset="./assets/img/profissional-home-care.webp" type="image/webp"><img src="./assets/img/profissional-home-care.jpg" width="900" height="600" alt="Fisioterapeuta orientando paciente em atendimento domiciliar" loading="lazy" decoding="async"></picture>
             <h3>Fisioterapia cardiorrespiratória e cuidados paliativos</h3>
             <p class="text-muted">Condutas voltadas à funcionalidade respiratória, ao conforto e à qualidade de vida.</p>
-            <a class="btn btn-secondary" href="./HTML/servicos.html">Ver serviços</a>
+            <a class="btn btn-secondary" href="./servicos/">Ver serviços</a>
           </article>
         </div>
       </div>
@@ -345,6 +386,11 @@
         <p class="text-muted">Escolha o melhor canal e receba orientação inicial para agendamento.</p>
         <div class="cta-cards">
           <article class="contact-quick">
+            <strong>Agenda online</strong>
+            <span class="text-muted">Escolha a unidade e o horário disponível.</span>
+            <a class="btn btn-primary btn-booking" href="https://api.whatsapp.com/send/?phone=5511999115387&amp;text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." data-booking data-position="final_home" target="_blank" rel="noopener noreferrer"><i class="fi fi-rr-calendar-check" aria-hidden="true"></i> Agendar avaliação</a>
+          </article>
+          <article class="contact-quick">
             <strong>WhatsApp</strong>
             <span class="text-muted">Resposta direcionada para avaliação inicial.</span>
             <a class="btn btn-whatsapp" href="https://api.whatsapp.com/send/?phone=5511999115387" target="_blank" rel="noopener noreferrer">Iniciar conversa</a>
@@ -374,8 +420,9 @@
       <nav class="stack" aria-label="Rodapé">
         <h3 class="footer-title">Navegação</h3>
         <ul class="footer-links footer-links-nav">
-          <li><a href="./HTML/index.html">Sobre</a></li>
-          <li><a href="./HTML/servicos.html">Serviços</a></li>
+          <li><a href="./sobre/">Sobre</a></li>
+          <li><a href="./servicos/">Serviços</a></li>
+          <li><a href="./unidades/">Unidades</a></li>
           <li><a href="./fisioterapia-domiciliar-mooca/">Regiões atendidas</a></li>
           <li><a href="./fisioterapia-forense/">Fisioterapia Forense</a></li>
           <li><a href="./contatos.html">Contato</a></li>

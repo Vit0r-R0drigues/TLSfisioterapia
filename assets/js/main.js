@@ -5,8 +5,10 @@ import { initTextRotator } from './modules/text-rotator.js?v=20260721';
 import { initWhatsAppFloat } from './modules/wa-float.js?v=20260724d';
 import { initContactForm } from './modules/contact-form.js?v=20260721b';
 import { initCalculators } from './modules/calculadoras.js?v=20260721';
-import { initTheme } from './modules/theme.js?v=20261030e';
-import { initCookieConsent } from './modules/cookie-consent.js?v=20261030e';
+import { initTheme } from './modules/theme.js?v=20261030h';
+import { initCookieConsent } from './modules/cookie-consent.js?v=20261030h';
+import { initBooking } from './modules/booking.js?v=20261030h';
+import { initMapEmbeds } from './modules/map-embed.js?v=20261030h';
 
 window.addEventListener('DOMContentLoaded', () => {
   initTheme();
@@ -16,6 +18,8 @@ window.addEventListener('DOMContentLoaded', () => {
   initReveal();
   initTextRotator();
   initWhatsAppFloat();
+  initBooking();
+  initMapEmbeds();
   initContactForm();
   initCalculators();
 });

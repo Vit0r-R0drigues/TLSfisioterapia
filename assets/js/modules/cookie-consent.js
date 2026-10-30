@@ -7,14 +7,9 @@ const PANEL_ID = 'cookie-preferences-panel';
 
 let closeTimer = null;
 
-function getPolicyPrefix() {
-  const path = window.location.pathname;
-  const isNestedPage = /\/(Agradecimento|BLOG|HTML|INSTAGRAM|landingpages|tools|fisioterapia-forense|fisioterapia-domiciliar-mooca)\//.test(path);
-  return isNestedPage ? '../' : './';
-}
-
+// O site fica na raiz do domínio, então os links das políticas podem ser absolutos em qualquer nível de pasta
 function getPolicyHref(fileName) {
-  return `${getPolicyPrefix()}${fileName}`;
+  return `/${fileName}`;
 }
 
 function clearCloseTimer() {

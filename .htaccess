@@ -1,4 +1,4 @@
-﻿# Apache hardening and routing
+# Apache hardening and routing
 Options -Indexes
 ServerSignature Off
 
@@ -9,8 +9,9 @@ RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # Legacy route compatibility
-RewriteRule ^sobre/?$ /HTML/index.html [L,R=301]
-RewriteRule ^servicos/?$ /HTML/servicos.html [L,R=301]
+RewriteRule ^HTML/index.html$ /sobre/ [L,R=301]
+RewriteRule ^HTML/servicos.html$ /servicos/ [L,R=301]
+RewriteRule ^BLOG/(.*)$ /blog/$1 [L,R=301]
 RewriteRule ^contatos/?$ /contatos.html [L,R=301]
 
 # Canonical error page

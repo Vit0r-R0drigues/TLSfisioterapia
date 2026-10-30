@@ -28,6 +28,10 @@ video {
   max-width: 100%;
 }
 
+img {
+  height: auto;
+}
+
 [hidden] {
   display: none !important;
 }

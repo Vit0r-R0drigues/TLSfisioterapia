@@ -126,11 +126,11 @@
   width: 100%;
   aspect-ratio: 1;
   background: #ffffff;
-  -webkit-mask-image: url("../img/logo-forense-dark.png");
+  -webkit-mask-image: url("../img/logo-forense-dark.webp");
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
   -webkit-mask-size: 145% auto;
-  mask-image: url("../img/logo-forense-dark.png");
+  mask-image: url("../img/logo-forense-dark.webp");
   mask-mode: luminance;
   mask-repeat: no-repeat;
   mask-position: center;
@@ -601,5 +601,32 @@ html[data-theme="light"] .hero-path-forensic .hero-path-topics .fi {
   .profile-intro {
     grid-template-columns: 16rem 1fr;
     gap: 2rem;
+  }
+}
+
+/* Formas de atendimento e agenda na página inicial */
+.hero-modes {
+  margin: 0;
+  max-width: 40rem;
+  color: var(--color-text-700);
+}
+
+.hero-booking {
+  justify-content: center;
+}
+
+.mode-card {
+  display: grid;
+  gap: 0.65rem;
+  align-content: start;
+}
+
+.mode-card .btn {
+  align-self: end;
+}
+
+@media (min-width: 62rem) {
+  .cta-cards {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
