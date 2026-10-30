@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self' https://api.whatsapp.com; script-src 'self' https://www.googletagmanager.com; style-src 'self' https://fonts.googleapis.com https://cdn-uicons.flaticon.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com https://cdn-uicons.flaticon.com; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>404 | Página não encontrada</title>
   <meta name="description" content="Página não encontrada. Volte para o site da TLS Fisioterapia.">
   <meta name="robots" content="noindex, nofollow">
@@ -19,12 +21,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
 
-  <script src="/assets/js/theme-preload.js?v=20260724d"></script>
-  <link rel="stylesheet" href="/assets/css/reset.css?v=20260724d">
-  <link rel="stylesheet" href="/assets/css/layout.css?v=20260724d">
-  <link rel="stylesheet" href="/assets/css/components.css?v=20260724d">
+  <script src="/assets/js/theme-preload.js?v=20261030e"></script>
+  <link rel="stylesheet" href="/assets/css/reset.css?v=20261030e">
+  <link rel="stylesheet" href="/assets/css/layout.css?v=20261030e">
+  <link rel="stylesheet" href="/assets/css/components.css?v=20261030e">
 
-  <script type="module" src="/assets/js/main.js?v=20260724d"></script>
+  <script type="module" src="/assets/js/main.js?v=20261030e"></script>
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
@@ -57,15 +59,41 @@
   </main>
 
   <footer class="footer">
+    <div class="container footer-grid">
+      <section class="stack">
+        <h3 class="footer-title">TLS Fisioterapia</h3>
+        <p class="text-muted"><strong>Responsável técnica:</strong> Thauane Lima, fisioterapeuta, CREFITO 310481-F</p>
+        <p class="text-muted"><strong>CNPJ:</strong> 52.811.773/0001-51</p>
+      </section>
+      <nav class="stack" aria-label="Rodapé">
+        <h3 class="footer-title">Navegação</h3>
+        <ul class="footer-links footer-links-nav">
+          <li><a href="/HTML/index.html">Sobre</a></li>
+          <li><a href="/HTML/servicos.html">Serviços</a></li>
+          <li><a href="/fisioterapia-domiciliar-mooca/">Regiões atendidas</a></li>
+          <li><a href="/fisioterapia-forense/">Fisioterapia Forense</a></li>
+          <li><a href="/contatos.html">Contato</a></li>
+        </ul>
+      </nav>
+      <section class="stack">
+        <h3 class="footer-title">Contato</h3>
+        <ul class="footer-links">
+          <li><a href="https://api.whatsapp.com/send/?phone=5511999115387" target="_blank" rel="noopener noreferrer">WhatsApp (11) 99911-5387</a></li>
+          <li><a href="mailto:thauanefisio1@gmail.com">thauanefisio1@gmail.com</a></li>
+          <li><a href="https://www.instagram.com/thaune_fisio/" target="_blank" rel="noopener noreferrer">Instagram @thaune_fisio</a></li>
+        </ul>
+      </section>
+    </div>
     <div class="footer-base">
       <div class="container">
-        &copy; <span data-year></span> TLS Fisioterapia. Todos os direitos reservados.
+        <span>&copy; <span data-year></span> TLS Fisioterapia. Todos os direitos reservados.</span>
         <a href="/politica-de-privacidade.html">Privacidade</a> |
         <a href="/politica-de-cookies.html">Cookies</a> |
         <a href="#" data-open-cookie-settings>Configurar cookies</a>
       </div>
     </div>
   </footer>
+
 </body>
 </html>
 

@@ -49,39 +49,24 @@ function buildToggleButton() {
 }
 
 function mountToggle(button) {
-  const navList = document.querySelector('.nav-list');
+  const headerRow = document.querySelector('.header-row');
 
-  if (!navList) {
-    const footer = document.querySelector('.footer-base .container');
-    if (footer) {
-      button.classList.add('footer-utility');
-      footer.append(button);
-    } else {
-      button.classList.add('theme-toggle-floating');
-      document.body.append(button);
-    }
+  // Keep the toggle visible in the header, next to the menu button on phones
+  if (headerRow) {
+    button.classList.add('header-theme-toggle');
+    const menuToggle = headerRow.querySelector('[data-menu-toggle]');
+    headerRow.insertBefore(button, menuToggle);
     return;
   }
 
-  const item = document.createElement('li');
-  item.className = 'nav-utility nav-theme-item';
-  const mobileNavigation = window.matchMedia('(max-width: 74.999rem)');
-
-  const syncPosition = () => {
-    if (mobileNavigation.matches) {
-      button.classList.remove('theme-toggle-floating');
-      item.append(button);
-      if (!item.isConnected) navList.append(item);
-      return;
-    }
-
-    if (item.isConnected) item.remove();
+  const footer = document.querySelector('.footer-base .container');
+  if (footer) {
+    button.classList.add('footer-utility');
+    footer.append(button);
+  } else {
     button.classList.add('theme-toggle-floating');
     document.body.append(button);
-  };
-
-  syncPosition();
-  mobileNavigation.addEventListener?.('change', syncPosition);
+  }
 }
 
 export function initTheme() {

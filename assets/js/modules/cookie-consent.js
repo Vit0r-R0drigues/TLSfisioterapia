@@ -157,6 +157,9 @@ function mountManageButton(button) {
   const navList = document.querySelector('.nav-list');
 
   if (!navList) {
+    // The footer already offers a "Configurar cookies" link
+    if (document.querySelector('[data-open-cookie-settings]')) return;
+
     const footer = document.querySelector('.footer-base .container');
     if (footer) {
       button.classList.add('footer-utility');
