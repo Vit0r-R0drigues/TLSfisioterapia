@@ -2,7 +2,7 @@
 
 // URL pública da agenda da TLS na Livance. Enquanto o valor contiver "{{",
 // os botões de agendamento usam o link de WhatsApp escrito no próprio HTML.
-export const LIVANCE_BOOKING_URL = '{{LIVANCE_BOOKING_URL}}';
+export const LIVANCE_BOOKING_URL = 'https://paciente.livance.com.br/thauanelima-szd/agendamento';
 
 export const SITE_URL = 'https://tlsfisioterapia.com.br';
 

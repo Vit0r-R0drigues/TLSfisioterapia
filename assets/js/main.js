@@ -7,8 +7,8 @@ import { initContactForm } from './modules/contact-form.js?v=20260721b';
 import { initCalculators } from './modules/calculadoras.js?v=20260721';
 import { initTheme } from './modules/theme.js?v=20261030h';
 import { initCookieConsent } from './modules/cookie-consent.js?v=20261030h';
-import { initBooking } from './modules/booking.js?v=20261030h';
-import { initMapEmbeds } from './modules/map-embed.js?v=20261030h';
+import { initBooking } from './modules/booking.js?v=20261102a';
+import { initMapEmbeds } from './modules/map-embed.js?v=20261102a';
 
 window.addEventListener('DOMContentLoaded', () => {
   initTheme();

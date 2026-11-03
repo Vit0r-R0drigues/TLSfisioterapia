@@ -1,4 +1,4 @@
-import { GOOGLE_MAPS_EMBED_KEY } from '../site-config.js?v=20261030h';
+import { GOOGLE_MAPS_EMBED_KEY } from '../site-config.js?v=20261102a';
 
 function mapUrl(query) {
   const q = encodeURIComponent(query);
