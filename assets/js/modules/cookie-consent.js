@@ -1,6 +1,6 @@
 const STORAGE_KEY = 'tls_cookie_consent_v1';
 const CONSENT_VERSION = 1;
-const GA_MEASUREMENT_ID = window.TLS_GA_MEASUREMENT_ID || 'G-XXXXXXXXXX';
+const GA_MEASUREMENT_ID = window.TLS_GA_MEASUREMENT_ID || 'G-9TT3P9WG3G';
 const HIDE_DELAY_MS = 220;
 const ACTION_FEEDBACK_MS = 1400;
 const PANEL_ID = 'cookie-preferences-panel';
