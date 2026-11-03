@@ -1,13 +1,31 @@
-# Arquivos sensíveis
+# Segredos e variáveis de ambiente
 .env
-.env.example
+.env.*
+*.pem
+*.key
 
-# Configurações de servidor (irrelevantes para GitHub Pages)
+# Documentos internos (análises, estratégia e dados que não devem ficar públicos)
+ANALISE_COMPLETA.md
+SEO_LOCAL_MOOCA.md
+_local/
+
+# Configuração de servidor Apache/Nginx (o GitHub Pages não usa)
+.htaccess
 nginx.conf
+
+# Ferramentas e editores
+.claude/
+.codex-audit/
+.vscode/
+.idea/
+node_modules/
+
+# Arquivos gerados, pacotes e registros
+*.zip
+*.log
+*.tmp
 
 # Sistema
 .DS_Store
 Thumbs.db
-
-# Evidências locais de auditoria visual
-.codex-audit/
+desktop.ini

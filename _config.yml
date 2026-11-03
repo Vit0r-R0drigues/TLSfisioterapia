@@ -1,0 +1,5 @@
+# Configuração do GitHub Pages: o site é HTML estático pronto.
+# Pastas e arquivos abaixo ficam no repositório, mas não são publicados no site.
+exclude:
+  - scripts/
+  - _config.yml
