@@ -1,6 +1,6 @@
 import { LIVANCE_BOOKING_URL, isBookingConfigured } from '../site-config.js?v=20261102a';
 
-const WHATSAPP_FALLBACK = 'https://api.whatsapp.com/send/?phone=5511999115387&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o.';
+const WHATSAPP_FALLBACK = 'https://api.whatsapp.com/send/?phone=5511925520084&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o.';
 
 function trackBookingClick(link, destination) {
   const params = {

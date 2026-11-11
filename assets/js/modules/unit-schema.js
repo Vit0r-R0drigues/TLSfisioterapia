@@ -31,7 +31,7 @@ function serviceLocationGraph(unit, pageUrl) {
       '@id': ORGANIZATION_ID,
       name: 'TLS Fisioterapia',
       url: `${SITE_URL}/`,
-      telephone: '+55-11-99911-5387'
+      telephone: '+55-11-92552-0084'
     },
     {
       '@type': 'Service',
@@ -60,7 +60,7 @@ function localBusinessGraph(unit, pageUrl) {
       '@id': `${pageUrl}#unidade`,
       name: `TLS Fisioterapia - ${unit.name}`,
       url: pageUrl,
-      telephone: '+55-11-99911-5387',
+      telephone: '+55-11-92552-0084',
       address: postalAddress(unit),
       parentOrganization: { '@id': ORGANIZATION_ID }
     }
